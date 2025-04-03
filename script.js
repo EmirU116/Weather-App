@@ -1,3 +1,9 @@
+function showImage()
+{
+    const weatherIcon = document.getElementById('weather-icon');
+    weatherIcon.style.display = 'block';
+}
+
 function displayHourlyForecast(hourlyData)
 {
     const hourlyForecastDiv = document.getElementById('hourly-forecast');
