@@ -1,3 +1,11 @@
+function displayWeather(data){
+    // Creating variables with html elements through id
+    const tempDivInfo = document.getElementById('temp-div');
+    const weatherInfoDiv = document.getElementById('weather-info');
+    const weatherIcon = document.getElementById('weather-icon');
+    const hourlyWeatherForecast = document.getElementById('hourly-forecast');
+}
+
 function getWeather()
 {
     const apiKey = process.env.OPENWEATHER_API;
