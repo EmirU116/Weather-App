@@ -4,6 +4,24 @@ function displayWeather(data){
     const weatherInfoDiv = document.getElementById('weather-info');
     const weatherIcon = document.getElementById('weather-icon');
     const hourlyWeatherForecast = document.getElementById('hourly-forecast');
+
+    // Clear previous content
+    weatherInfoDiv.innerHTML = '';
+    hourlyWeatherForecast.innerHTML = '';
+    tempDivInfo.innerHTML = '';
+
+    if(data.cod === '404')
+    {
+        weatherInfoDiv.innerHTML = `<p>${data.message}</p>`;
+    }
+    else
+    {
+        const cityName = data.name;
+        const tempreture = Math.round(data.main.temp - 273.15);     // future research on why 273.15
+        const description = data.weather[0].description;
+        const iconCode = data.weather[0].icon;
+        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
+    }
 }
 
 function getWeather()
