@@ -58,7 +58,7 @@ function displayWeather(data){
 
         const weatherHTML = `
             <p>${cityName}</p>
-            <p>${description}</p>
+            <p>${String(description).charAt(0).toUpperCase() + String(description).slice(1)}</p>
         `;
 
         tempDivInfo.innerHTML = tempretureHTML;
@@ -72,7 +72,7 @@ function displayWeather(data){
 
 function getWeather()
 {
-    const apiKey = process.env.OPENWEATHER_API;
+    const apiKey = 'eeeeb6495f3218a380e3e9ba5709e5b4';
     const city = document.getElementById('city').value;
 
     // empty input handling 
