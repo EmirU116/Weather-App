@@ -95,6 +95,8 @@ button:hover
     align-items: center;
     margin-right: 10px;
     color: white;
+    margin-bottom: 20px;    /* spacing the bottom away from the horizontal scroll */
+    
 }
 
 .hourly-item img 

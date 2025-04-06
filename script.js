@@ -43,6 +43,8 @@ function displayWeather(data){
     if(data.cod === '404')
     {
         weatherInfoDiv.innerHTML = `<p>${data.message}</p>`;
+        weatherIcon.src = '';
+        weatherIcon.style.display = 'none';     // if weather place is not found, the icon div is being none.
     }
     else
     {

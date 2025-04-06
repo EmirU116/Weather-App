@@ -9,18 +9,24 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
+        
+        <!-- some ideas to make:
+         - dark mode / background adapts to the weather 
+         - live weather (if its not refreshed, it wont show the live weather)
+         -->
+
         <div id="weather-container">
             <h2>Weather App</h2>
+            
+            <img id="weather-icon" alt="Weather Icon">
+            
+            <div id="temp-div"></div>
+            
+            <div id="weather-info"></div>
+            
+            <div id="hourly-forecast"></div>        <!-- this div is for displaying the weather per hour. -->
             <input type="text" id="city" placeholder="Enter city">
             <button onclick="getWeather()">Search</button>
-
-            <img id="weather-icon" alt="Weather Icon">
-
-            <div id="temp-div"></div>
-
-            <div id="weather-info"></div>
-
-            <div id="hourly-forecast"></div>
         </div>
         <script src="./script.js"></script>
     </body>
