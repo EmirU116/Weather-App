@@ -43,8 +43,6 @@ function displayWeather(data){
     if(data.cod === '404')
     {
         weatherInfoDiv.innerHTML = `<p>${data.message}</p>`;
-        weatherIcon.src = '';
-        weatherIcon.style.display = 'none';     // if weather place is not found, the icon div is being none.
     }
     else
     {
@@ -53,6 +51,9 @@ function displayWeather(data){
         const description = data.weather[0].description;
         const iconCode = data.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
+        const tempLike = data.main.temp - 273.15;
+        
+        console.log("This is a test" + tempLike);
 
         const tempretureHTML = `
             <p>${tempreture}*C</p>
@@ -91,6 +92,7 @@ function getWeather()
     .then(response => response.json())
     .then(data => {
         displayWeather(data);
+        console.log(data);
     })
     .catch(error => {
         console.error('Error fetching current weather data: ', error);

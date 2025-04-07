@@ -1,7 +1,7 @@
 body
 {
     /* this centered the elements on the screen */
-    background: #8c52ff;
+    background: #5275ff;
     font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@ input
 
 button
 {
-    background: #debff4;
+    background: #bfd6f4;
     color: white;
     padding: 10px;
     border: none;
@@ -54,7 +54,7 @@ button
 
 button:hover
 {
-    background: #8b48d7;
+    background: #486cd7;
 }
 
 #temp-div p
